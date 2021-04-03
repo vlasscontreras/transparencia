@@ -1,20 +1,21 @@
 <template>
   <div>
-    <header>
-      <navbar />
-    </header>
+    <Header />
     <Nuxt />
+    <Footer />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
-import Navbar from '@/components/navigation/Navbar.vue'
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
 
 export default Vue.extend({
   components: {
-    Navbar
+    Header,
+    Footer
   }
 })
 </script>
