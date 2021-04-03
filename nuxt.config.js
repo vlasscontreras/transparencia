@@ -54,6 +54,11 @@ export default {
     }
   },
 
+  // Tailwind config: https://tailwindcss.nuxtjs.org/setup
+  tailwindcss: {
+    jit: true
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }
