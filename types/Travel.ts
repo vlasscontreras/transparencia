@@ -6,25 +6,25 @@ interface Travel {
   institution_dependency_id: Number|null;
   enabled: Boolean;
   marked: Boolean;
-  name: String;
-  officer_name: String;
-  officer_position: String;
-  destination: String;
-  passage_amount: String;
-  viatical_amount: String;
-  expenses_amount: String;
-  departure_date: String;
-  return_date: String;
-  objective: String;
-  created_at: String;
-  updated_at: String;
-  observations: String;
-  passage_payer: String|null;
-  viatical_payer: String|null;
-  expenses_payer: String|null;
-  passage_payer_comments: String;
-  viatical_payer_comments: String;
-  expenses_payer_comments: String;
+  name: string;
+  officer_name: string;
+  officer_position: string;
+  destination: string;
+  passage_amount: string;
+  viatical_amount: string;
+  expenses_amount: string;
+  departure_date: string;
+  return_date: string;
+  objective: string;
+  created_at: string;
+  updated_at: string;
+  observations: string;
+  passage_payer: string|null;
+  viatical_payer: string|null;
+  expenses_payer: string|null;
+  passage_payer_comments: string;
+  viatical_payer_comments: string;
+  expenses_payer_comments: string;
 }
 
 export default Travel
