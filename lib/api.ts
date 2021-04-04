@@ -1,7 +1,9 @@
 import axios from 'axios'
 
-const instance = axios.create({
-  baseURL: 'https://www.transparencia.gob.sv/api/v1'
+const api = axios.create({
+  baseURL: 'https://cors-anywhere.herokuapp.com/https://www.transparencia.gob.sv/api/v1'
 })
 
-export default instance
+api.defaults.headers.common['Content-Type'] = 'application/json'
+
+export default api
