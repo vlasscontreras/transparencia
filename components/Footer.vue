@@ -1,6 +1,6 @@
 <template>
-  <footer>
-    <div class="container mx-auto pt-5 border-t flex flex-col sm:flex-row justify-center items-center text-xs space-y-3 sm:space-y-0">
+  <footer class="py-5 border-t">
+    <div class="container mx-auto flex flex-col sm:flex-row justify-center items-center text-xs space-y-3 sm:space-y-0">
       <a href="https://github.com/vlasscontreras" target="_blank" rel="noopener noreferrer" class="inline-block text-gray-500 sm:w-1/6 text-center">
         Author
       </a>
