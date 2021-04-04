@@ -9,6 +9,7 @@
 <script lang="ts">
 import Vue from 'vue'
 
+import { title } from '@/lib/meta'
 import TravelCollection from '@/components/travels/TravelCollection.vue'
 import PageHeader from '~/components/PageHeader.vue'
 
@@ -16,6 +17,9 @@ export default Vue.extend({
   components: {
     TravelCollection,
     PageHeader
+  },
+  head: {
+    title: title('Viajes')
   }
 })
 </script>
