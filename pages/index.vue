@@ -1,11 +1,5 @@
-<template>
-  <div class="container">
-    Content
-  </div>
-</template>
-
 <script lang="ts">
-import Vue from 'vue'
+import Travels from '~/pages/travels.vue'
 
-export default Vue.extend({})
+export default Travels
 </script>
