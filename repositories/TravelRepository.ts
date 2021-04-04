@@ -9,7 +9,8 @@ import TravelParamsInterface from '@/types/TravelParamsInterface'
  * @return {Promise}
  */
 export const all = (params?: TravelParamsInterface): Promise<any> => {
-  return api.get('/travels', {
-    params
+  return api.get('/travels.json', {
+    params,
+    data: null
   })
 }

@@ -9,7 +9,7 @@
         <Burger class="w-6 h-6" />
       </button>
 
-      <div class="bg-white md:bg-transparent fixed md:relative md:flex flex-grow items-center p-5 md:p-0 text-gray-700 md:text-white top-0 right-0 w-72 shadow-lg md:shadow-none min-h-screen md:min-h-full" :class="{ hidden: !expanded }">
+      <div class="bg-white md:bg-transparent fixed md:relative md:flex flex-grow items-center p-5 md:p-0 text-gray-700 md:text-white top-0 right-0 w-72 shadow-lg md:shadow-none min-h-screen md:min-h-full z-10" :class="{ hidden: !expanded }">
         <div class="md:hidden pb-3 border-b text-right">
           <button class="focus:outline-none" @click="toggle">
             <Times />

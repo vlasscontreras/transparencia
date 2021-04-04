@@ -1,7 +1,7 @@
 <template>
   <ul>
     <li>
-      <nuxt-link to="/viajes" class="block py-3 md:py-0">
+      <nuxt-link to="/travels" class="block py-3 md:py-0">
         Viajes
       </nuxt-link>
     </li>
