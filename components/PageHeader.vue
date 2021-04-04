@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div class="hidden sm:block pb-1">
+    <div class="pb-1">
       <Breadcrumbs :to="to" :title="title" />
     </div>
-    <div class="sm:flex sm:justify-between">
-      <h2 class="text-2xl font-semibold font-sans text-gray-900 sm:text-xl">
+    <div class="flex justify-between">
+      <h2 class="text-xl font-semibold font-sans text-gray-900">
         {{ title }}
       </h2>
     </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="shadow-lg rounded-xl p-4 bg-white dark:bg-gray-800 relative overflow-hidden">
+  <div class="shadow-lg sm:rounded-xl p-4 bg-white">
     <div class="w-full h-full">
       <div class="mb-4 space-y-2">
         <p class="text-gray-800 dark:text-white text-xl font-medium">
