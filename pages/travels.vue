@@ -71,6 +71,12 @@ export default Vue.extend({
   },
 
   methods: {
+    scrollUp () {
+      document.documentElement.scrollIntoView({
+        behavior: 'smooth'
+      })
+    },
+
     goTo (page: number) {
       this.currentPage = page
     },
@@ -82,6 +88,8 @@ export default Vue.extend({
         page,
         per_page: limit
       }
+
+      this.scrollUp()
 
       TravelRepository.all(params)
         .then((response) => {
