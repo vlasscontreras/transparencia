@@ -1,9 +1,9 @@
 interface TravelParamsInterface {
-  startAt?: String;
-  endAt?: String;
-  institutionId?: Number;
-  perPage?: Number;
-  page: Number;
+  startAt?: string;
+  endAt?: string;
+  institutionId?: number;
+  perPage?: number;
+  page: number;
 }
 
 export default TravelParamsInterface
