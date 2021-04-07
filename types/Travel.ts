@@ -1,9 +1,9 @@
 /* eslint-disable camelcase */
 
 interface Travel {
-  id: Number;
-  institution_id: Number;
-  institution_dependency_id: Number|null;
+  id: number;
+  institution_id: number;
+  institution_dependency_id: number | null;
   enabled: Boolean;
   marked: Boolean;
   name: string;

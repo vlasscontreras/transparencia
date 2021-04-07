@@ -43,7 +43,9 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    // https://github.com/nuxt-community/proxy-module
+    '@nuxtjs/proxy'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -60,6 +62,10 @@ export default {
   tailwindcss: {
     jit: true
   },
+
+  proxy: [
+    'https://www.transparencia.gob.sv/api/v1'
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
