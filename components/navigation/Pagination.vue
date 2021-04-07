@@ -35,7 +35,7 @@ export default Vue.extend({
   },
 
   computed: {
-    disabledClass () {
+    disabledClass (): string {
       return this.disabled ? 'opacity-50 pointer-events-none cursor-not-allowed' : ''
     }
   },
@@ -43,16 +43,12 @@ export default Vue.extend({
   methods: {
     prev () {
       if (this.current > 1) {
-        this.navigate(this.current - 1)
+        this.$emit('navigate', this.current - 1)
       }
     },
 
     next () {
-      this.navigate(this.current + 1)
-    },
-
-    navigate (to: Number) {
-      this.$emit('navigate', to)
+      this.$emit('navigate', this.current + 1)
     }
   }
 })
