@@ -25,7 +25,7 @@ export default Vue.extend({
 
   props: {
     current: {
-      type: Number,
+      type: [String, Number],
       required: true
     },
     disabled: {
@@ -42,13 +42,17 @@ export default Vue.extend({
 
   methods: {
     prev () {
-      if (this.current > 1) {
-        this.$emit('navigate', this.current - 1)
+      const current = this.current as number
+
+      if (current > 1) {
+        this.$emit('navigate', current - 1)
       }
     },
 
     next () {
-      this.$emit('navigate', this.current + 1)
+      const current = this.current as number
+
+      this.$emit('navigate', current + 1)
     }
   }
 })
