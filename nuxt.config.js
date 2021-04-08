@@ -63,9 +63,16 @@ export default {
     jit: true
   },
 
-  proxy: [
-    'https://www.transparencia.gob.sv/api/v1'
-  ],
+  // Proxy module: https://github.com/nuxt-community/proxy-module
+  proxy: {
+    '/api': {
+      target: 'https://www.transparencia.gob.sv/api/v1',
+      pathRewrite: {
+        '^/api': '/'
+      },
+      changeOrigin: true
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

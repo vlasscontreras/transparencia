@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: '/api/v1'
+  baseURL: '/api'
 })
 
 api.defaults.headers.common['Content-Type'] = 'application/json'
