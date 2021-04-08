@@ -61,8 +61,6 @@ export default Vue.extend({
    * Fetch travels
    */
   async fetch () {
-    this.scrollUp()
-
     const response = await TravelRepository.all({
       page: this.currentPage,
       perPage: 9
@@ -102,6 +100,8 @@ export default Vue.extend({
      * Update page query string
      */
     goTo (page: string) {
+      this.scrollUp()
+
       this.$router.push({
         path: this.$route.path,
         query: { page }

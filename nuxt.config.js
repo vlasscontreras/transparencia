@@ -63,6 +63,7 @@ export default {
     jit: true
   },
 
+  // Proxy module: https://github.com/nuxt-community/proxy-module
   proxy: [
     'https://www.transparencia.gob.sv/api/v1'
   ],
