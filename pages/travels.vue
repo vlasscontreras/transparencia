@@ -104,7 +104,10 @@ export default Vue.extend({
 
       this.$router.push({
         path: this.$route.path,
-        query: { page }
+        query: {
+          ...this.$route.query,
+          page
+        }
       })
     }
   }
