@@ -1,6 +1,9 @@
 <template>
   <div class="container mx-auto py-10 md:pb-20 px-4">
-    <PageHeader title="Viajes" to="/travels" class="mb-7" />
+    <div class="flex justify-between">
+      <PageHeader title="Viajes" to="/travels" class="mb-7" />
+      <Dropdown :items="yearOptions" :current="currentYear" />
+    </div>
 
     <!-- Loading -->
     <div v-if="$fetchState.pending" :class="gridClass">
@@ -34,6 +37,7 @@ import PageHeader from '@/components/PageHeader.vue'
 import TravelLoader from '@/components/loaders/TravelLoader.vue'
 import GenericRetry from '@/components/errors/GenericRetry.vue'
 import Pagination from '@/components/navigation/Pagination.vue'
+import Dropdown from '@/components/navigation/Dropdown.vue'
 
 export default Vue.extend({
   components: {
@@ -41,7 +45,8 @@ export default Vue.extend({
     PageHeader,
     TravelLoader,
     GenericRetry,
-    Pagination
+    Pagination,
+    Dropdown
   },
 
   data: () => ({
@@ -63,13 +68,13 @@ export default Vue.extend({
   async fetch () {
     const response = await TravelRepository.all({
       page: this.currentPage,
-      perPage: 9
+      perPage: 9,
+      startAt: `${this.currentYear}-01-01`,
+      endAt: `${this.currentYear}-12-31`
     })
 
     this.travels = response.data
   },
-
-  fetchKey: 'page',
 
   head: {
     title: title('Viajes')
@@ -79,11 +84,29 @@ export default Vue.extend({
     currentPage (): number {
       const current = this.$route.query.page
       return current ? parseInt(current.toString()) : 1
+    },
+
+    currentYear (): string {
+      const defaultOption = (new Date()).getFullYear()
+      const current = parseInt(this.$route.query.year?.toString(), 10)
+
+      if (!this.getYearRange().includes(current)) {
+        return defaultOption.toString()
+      }
+
+      return current.toString()
+    },
+
+    yearOptions (): Array<any> {
+      return this.getYearRange().map(year => ({
+        to: '?year=' + year,
+        text: year
+      }))
     }
   },
 
   watch: {
-    '$route.query.page': '$fetch'
+    '$route.query': '$fetch'
   },
 
   methods: {
@@ -109,6 +132,17 @@ export default Vue.extend({
           page
         }
       })
+    },
+
+    getYearRange () {
+      const years = []
+      const max = (new Date()).getFullYear()
+
+      for (let i = max; i >= 2013; i -= 1) {
+        years.push(i)
+      }
+
+      return years
     }
   }
 })
