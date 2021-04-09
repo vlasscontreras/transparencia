@@ -10,10 +10,12 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: defaultDescription }
+      { hid: 'description', name: 'description', content: defaultDescription },
+      { hid: 'msapplication-TileColor', name: 'msapplication-TileColor', content: '#24292e' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#24292e' }
     ]
   },
 
@@ -54,7 +56,15 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en'
+      lang: 'es'
+    },
+    meta: {
+      theme_color: '#24292e',
+      name: defaultTitle,
+      short_name: defaultTitle,
+      description: defaultDescription,
+      background_color: '#24292e',
+      display: 'standalone'
     }
   },
 
