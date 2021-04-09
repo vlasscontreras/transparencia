@@ -16,7 +16,7 @@
           </button>
         </div>
 
-        <NavMenu class="flex flex-col md:flex-row md:space-x-4 flex-grow divide-y md:divide-none" />
+        <NavMenu class="flex flex-col md:flex-row md:space-x-4 flex-grow divide-y md:divide-none" @click="toggle" />
         <NavCta class="flex space-x-4 md:space-x-4 items-center justify-center mt-5 md:mt-0" />
       </div>
     </div>

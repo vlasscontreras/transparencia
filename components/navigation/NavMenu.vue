@@ -1,5 +1,5 @@
 <template>
-  <ul>
+  <ul v-on="$listeners">
     <li>
       <nuxt-link to="/travels" class="block py-3 md:py-0">
         Viajes
