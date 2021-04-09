@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/api/:match*", "destination": "https://www.transparencia.gob.sv/api/v1/:match*" }
+  ]
+}
