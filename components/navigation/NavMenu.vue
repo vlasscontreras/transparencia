@@ -6,17 +6,17 @@
       </nuxt-link>
     </li>
     <li>
-      <nuxt-link to="/obras" class="block py-3 md:py-0">
+      <nuxt-link to="/jobs" class="block py-3 md:py-0">
         Obras
       </nuxt-link>
     </li>
     <li>
-      <nuxt-link to="/servicios" class="block py-3 md:py-0">
+      <nuxt-link to="/services" class="block py-3 md:py-0">
         Servicios
       </nuxt-link>
     </li>
     <li>
-      <nuxt-link to="/documentos" class="block py-3 md:py-0">
+      <nuxt-link to="/documents" class="block py-3 md:py-0">
         Documentos
       </nuxt-link>
     </li>
