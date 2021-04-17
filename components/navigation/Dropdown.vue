@@ -1,5 +1,5 @@
 <template>
-  <div class="relative inline-block text-left">
+  <div v-click-outside="toggle" class="relative inline-block text-left">
     <div>
       <button
         id="options-menu"
@@ -37,10 +37,15 @@
 import Vue from 'vue'
 
 import Chevron from '@/components/icons/Chevron.vue'
+import clickOutside from '@/directives/clickOutside'
 
 export default Vue.extend({
   components: {
     Chevron
+  },
+
+  directives: {
+    clickOutside
   },
 
   props: {
