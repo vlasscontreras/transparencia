@@ -59,8 +59,13 @@ export default Vue.extend({
   }),
 
   methods: {
-    toggle () {
-      this.expanded = !this.expanded
+    toggle (state: Boolean | Event): void {
+      if (typeof state === 'object') {
+        this.expanded = !this.expanded
+        return
+      }
+
+      this.expanded = state
     }
   }
 })
